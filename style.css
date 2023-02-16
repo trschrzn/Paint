@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 90vw;
+  height: 90vh;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.box {
+  box-shadow: 0 2px 8px 0 #333;
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+}
+
+.toolbox {
+  padding: 20px;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  background: #f6f3eb;
+}
+
+.toolboxButton {
+  padding: 10px 23px;
+  border-radius: 13px;
+  font-size: 18px;
+  border: none;
+  background-color: #8297a4;
+  letter-spacing: 1px;
+  color: #f6f3eb;
+}
+
+.toolboxButton:hover {
+  background-color: #f0cb83;
+  box-shadow: 0 2px 8px 0 #f0cb83;
+  color: #f6f3eb;
+}
+
+.tooltipText {
+  visibility: hidden;
+  padding: 15px 27px;
+  position: absolute;
+  background: #8297a4;
+  border-radius: 10px;
+  border: 0;
+  right: 200px;
+  top: 130px;
+}
+
+.tooltipText::after {
+  position: absolute;
+  background: inherit;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: -6px;
+  right: 80px;
+  transform: rotate(45deg);
+}
+
+.toolboxNumber {
+  width: 70px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: 0;
+}
+
+.toolboxColor {
+  height: 50px;
+  width: 70px;
+  border: none;
+  outline: 0;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}

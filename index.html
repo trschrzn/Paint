@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint webowy!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="box">
+            <div class="toolbox">
+                <button class="toolboxButton" id="newProject">Nowy projekt</button>
+                    <input class="toolboxNumber" type="number" name="number" id="size" value="5">
+                <div class="tooltip">
+                    <input class="toolboxColor" type="color" name="colorPicker" id="color">
+                    <span class="tooltipText">Choose your color!</span>
+                </div>
+                
+            </div>
+            <canvas id="canvas" width="1100px" height="400px"></canvas>
+        </div>
+    </div>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+$dark: #253438;
+$blue: #8297a4;
+$pink: #d2b8c5;
+$beige: #f6f3eb;
+$yellow: #f0cb83;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #333;
+    // overflow: hidden;
+}
+button {cursor: pointer;}
+.wrapper{
+    width: 90vw;
+    height: 90vh;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+.box
+{
+    box-shadow: 0 2px 8px 0 #333;
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+}
+.toolbox{
+    padding: 20px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background: $beige;
+}
+.toolboxButton{
+    padding: 10px 23px;
+    border-radius: 13px;
+    font-size: 18px;
+    border: none;
+    background-color: $blue;
+    letter-spacing: 1px;
+    color:  $beige;
+    &:hover{
+        background-color: $yellow;
+        box-shadow: 0 2px 8px 0 $yellow;
+        color: $beige;
+    }
+}
+
+.tooltipText
+{
+    visibility: hidden;
+    padding: 15px 27px;
+    position: absolute;
+    background: $blue;
+    border-radius: 10px;
+    border: 0;
+
+    right: 200px;
+    top: 130px;
+    &::after{
+        position: absolute;
+        background: inherit;
+        content: "";
+        width: 24px;
+        height: 24px;
+        top: -6px;
+        right: 80px;
+        transform: rotate(45deg);
+    }
+}
+
+.toolboxNumber{
+    width: 70px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    outline: 0;
+}
+.toolboxColor{
+    height: 50px;
+    width: 70px;
+    border: none;
+    outline: 0;
+    padding: 7px;
+    cursor: pointer;
+}
+.tooltip:hover{
+    .tooltipText {
+        visibility: visible;
+    }
+}
+
